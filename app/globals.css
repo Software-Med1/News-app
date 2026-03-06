@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+*{
+  /* border: 1px solid #000 */
+}
+:root{
+    --eerie-black: hsla(225, 9%, 9%, 0.8);
+}
+body {
+  @apply
+  md:text-[1.2rem];
+  background: #35394c;
+  color: white;
+  /* background:  hsl(240, 9%, 91%); */
+}
+nav {
+  @apply 
+    p-3
+    flex
+    justify-between
+    w-full
+    lg:w-3xl
+    fixed
+    top-0.5
+    left-1/2 
+    transform -translate-x-1/2
+    z-30;
+    border : 2px solid #6a7282;
+    background: #35394c
+}
+h3 {
+  @apply
+  font-semibold;
+}
+img {
+  @apply
+  object-cover;
+}
+nav a:hover {
+  @apply 
+    text-black ;
+}
+.input-wrapper{
+  @apply
+  border-2 w-xs my-5 ;
+  > input {
+    @apply
+    w-full ps-11 p-3;
+  }
+}
+.category {
+  @apply
+  border md:px-5 md:py-2 py-1 px-2 rounded-[5px] cursor-pointer ;
+}
+.active {
+  @apply
+  bg-blue-50 text-black rounded-[8px];
+}
+
+.hero {
+  background-image: url('/46.jpg');
+  height: 85vh;
+  width: 100%;
+  background-position-x: -200px;
+  background-position-y: 53px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.scroll::-webkit-scrollbar { 
+  height: 15px;
+}
+
+.scroll::-webkit-scrollbar-track { background: grey; }
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: deepskyblue;
+  border-radius: 12px;
+}
+/* Firefox scrollbar styling */
+.scroll {
+  scrollbar-width: auto;
+  scrollbar-color: deepskyblue grey;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-position-y: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .hero {
+    background-position: center;
+  }
+}
+@media screen and (max-width: 640px ) {
+  .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 16px 0 rgba(44,196,182,0.12);
+  padding : 1rem .5rem;
+  padding-bottom: 5px;
+  position: fixed;
+  background: #1e212e;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: fit-content;
+  z-index: 666;
+  transition: background 0.4s ease-in-out, box-shadow 0.2s ease-in-out;
+  border-bottom: 2px solid rgb(115, 114, 114);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  > a{
+    width: 100%;
+    padding: 10px 0 5px 5px;
+    border-bottom: 1px solid rgb(115, 114, 114);
+   }
+   > .active {
+    background-color: unset;
+    border-radius: unset;
+    color: unset;
+   }
+}
+}
+

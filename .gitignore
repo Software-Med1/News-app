@@ -1,0 +1,31 @@
+cat <<EOF > .gitignore
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Next.js Build Output
+.next/
+out/
+build/
+
+# Firebase
+.firebase/
+firebase-debug.log*
+.firebaserc
+
+# Environment Variables
+.env
+.env*.local
+
+# System Files
+.DS_Store
+EOF
+
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
