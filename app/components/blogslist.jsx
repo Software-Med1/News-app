@@ -1,5 +1,7 @@
 import { cache } from 'react'
 
+const apiKey = process.env.DATABASE_KEY;
+
 const addCategory = (data, cat) => {
   const blogs = [];
   data.forEach((e) => {
@@ -22,9 +24,9 @@ const addCategory = (data, cat) => {
 const fetchAll = cache(async function fetchAll() {
   try {
     const [TechRes, EntRes, SportRes] = await Promise.all([
-      fetch('https://newsapi.org/v2/top-headlines?category=Technology&apiKey=7951be79a6c041c19329b686edd325d0', { next: { revalidate: 3600 } }),
-      fetch('https://newsapi.org/v2/top-headlines?category=Entertainment&apiKey=7951be79a6c041c19329b686edd325d0', { next: { revalidate: 3600 } }),
-      fetch('https://newsapi.org/v2/top-headlines?category=sports&apiKey=7951be79a6c041c19329b686edd325d0', { next: { revalidate: 3600 } })
+      fetch(`https://newsapi.org/v2/top-headlines?category=Technology&apiKey=${apiKey}`, { next: { revalidate: 3600 } }),
+      fetch(`https://newsapi.org/v2/top-headlines?category=Entertainment&apiKey=${apiKey}`, { next: { revalidate: 3600 } }),
+      fetch(`https://newsapi.org/v2/top-headlines?category=sports&apiKey=${apiKey}`, { next: { revalidate: 3600 } })
     ]);
 
     if (!TechRes.ok || !EntRes.ok || !SportRes.ok) {

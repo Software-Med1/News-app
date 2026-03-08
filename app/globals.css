@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+  --font-dancing: var(--font-dancing);
+  --font-space-grotesk: var(--font-space-grotesk);
+  --font-sans: var(--font-poppins);
+}
+
 *{
   /* border: 1px solid #000 */
 }
@@ -25,7 +31,7 @@ nav {
     left-1/2 
     transform -translate-x-1/2
     z-30;
-    border : 2px solid #6a7282;
+    border-bottom : 2px solid #6a7282;
     background: #35394c
 }
 h3 {
@@ -58,14 +64,26 @@ nav a:hover {
 }
 
 .hero {
-  background-image: url('/46.jpg');
-  height: 85vh;
-  width: 100%;
-  background-position-x: -200px;
-  background-position-y: 53px;
+  background-image: url('/61.jpg');
+  height: 45vh;
+  min-width: 100%;
+  background-position-x: center;
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: 0; 
 }
+.hero h3 {
+  margin-top: 1.5rem;
+}
+.hero  p {
+    max-width: 94%;
+    text-align: center;
+    margin: auto;
+    margin-top: 1.5rem;
+    color: #E4E4E4;
+    font-weight: bold;
+    line-height: 36px;
+  }
 .scroll::-webkit-scrollbar { 
   height: 15px;
 }
@@ -84,15 +102,29 @@ nav a:hover {
 
 @media screen and (min-width: 768px) {
   .hero {
-    background-position-y: 0px;
+    height: 40vh;
+  }
+  .hero  p {
+    max-width: 80%;
+    margin: auto;
+    margin-top: 2rem;
+    line-height: 50px;
+  }
+}
+@media screen and (min-width: 1024px){
+  .hero {
+    height: 70vh;
+  }
+  .hero h3 {
+    margin-top: 1rem;
+  }
+  .hero  p {
+    margin-top: 2rem;
+    text-align: start;
+    min-width: 100%;
   }
 }
 
-@media screen and (min-width: 1200px){
-  .hero {
-    background-position: center;
-  }
-}
 @media screen and (max-width: 640px ) {
   .mobile-menu {
   display: flex;

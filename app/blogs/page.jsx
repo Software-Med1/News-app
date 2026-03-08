@@ -43,7 +43,7 @@ const blogs = async ({searchParams}) => {
   const stories = shuffle([...a, ...b, ...c])
 
   return (
-    <div className='max-w-[1536px] mx-auto px-1 md:px-4 mb-4 mt-18 md:mt-20'>
+    <div className='max-w-[1536px] mx-auto px-1 md:px-4 mb-4 mt-3 md:mt-20'>
       <Category />
     {!articles || articles.length === 0 && <p className='text-center'>Please Refresh, No News Available.</p>}
     {articles.length !== 0 && cat.length === 0 && <p className='text-center'>No News matching your keywords "{query}".</p>}

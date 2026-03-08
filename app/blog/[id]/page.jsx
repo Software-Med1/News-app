@@ -33,7 +33,7 @@ export default  async function Blog ( {params} ) {
       {blog &&  <div>
       <div className='container mx-auto text-center'>
         <h2 className='text-3xl md:text-5xl md:max-w-3xl xl:text-6xl font-bold xl:max-w-6xl mx-auto my-8 pt-12'>{title}</h2>
-        <img className="h-10 w-10 rounded-full z-10 mx-auto" src="/newsletter.png" alt=""/>
+        <img className="h-10 w-10 rounded-full z-10 mx-auto" src="/17.png" alt=""/>
         <p className='font-semibold'>{author}</p>
       </div>
 

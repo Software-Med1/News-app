@@ -33,9 +33,9 @@ export default async function Home() {
     <div className="">
 
       <section className="hero relative lg:bg-center">
-        <div className="z-10 text-center text-gray-900 max-w-[340px] md:max-w-[540px] lg:max-w-lg pt-20 lg:pt-32 lg:text-start container absolute left-1/2 transform -translate-x-1/2 lg:translate-x-0">
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold">Hey there!!!, Welcome to Med News</h3>
-          <p className="text-3xl md:text-4xl lg:text-5xl">Explore our Curated collection
+        <div className="z-10 text-center  max-w-[340px] md:max-w-[540px] lg:max-w-lg pt-20 lg:pt-24 lg:text-start container absolute left-1/2 transform -translate-x-1/2 lg:translate-x-0">
+          <h3 className="font-space-grotesk text-3xl md:text-4xl lg:text-5xl font-semibold">Hey there!!!, Welcome to Med News</h3>
+          <p className="font-dancing text-2xl md:text-4xl lg:text-5xl">Explore our Curated collection
           of news on Tech, Entertainment and Sports.</p>
         </div>
       </section>

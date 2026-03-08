@@ -43,15 +43,15 @@ const Nav = () => {
     <div className='relative'>
       <nav className="">
 
-        <h3>MED-NEWS</h3>
+        <h3><Link href="/">MED-NEWS</Link></h3>
 
         <div className="md:flex md:gap-3">
-          <img src="/menu.png" className='md:hidden w-8 h-8 cursor-pointer' alt="" onClick={() => setmenu(!menu)} />
+          <img src="/menu.png" className='md:hidden w-6 h-6 cursor-pointer' alt="" onClick={() => setmenu(!menu)} />
           <div className={`relative ${menu ? "mobile-menu" :  "md:flex gap-3 hidden"}`}>
             {/* <h3 className={`mb-4 ${menu ? "" :  "hidden"}`}>MED-BLOG</h3> */}
-            <img src="/close.png" className='md:hidden w-9 h-9 cursor-pointer absolute top-3 right-2' alt="" onClick={() => setmenu(!menu)} />
+            <img src="/close.png" className='md:hidden w-7 h-7 cursor-pointer absolute top-3 right-2' alt="" onClick={() => setmenu(!menu)} />
             <Link href={'/'} className={`${category === 'home' ? 'active md:px-2' : ''}`} onClick={() => setCategory('home')}>Home</Link>
-            <Link href="/blogs" className={`${category === 'blogs' ? 'active md:px-2' : ''}`} onClick={() => setCategory('blogs')}>News</Link>
+            <Link href="/blogs" className={`${category === 'blogs' ? 'active md:px-2' : ''}`} onClick={() => setCategory('blogs')}>All News</Link>
             <Link href="#socials-list" className={`${category === 'contact' ? 'active md:px-2' : ''}`} onClick={() => setCategory('contact')}>Contact Med</Link>
           
             { pathname === '/blogs' &&
@@ -64,6 +64,11 @@ const Nav = () => {
         </div>
 
       </nav>
+              { pathname === '/blogs' &&
+              <div className="border-1 w-11/12 mx-auto mt-16 md:hidden border-blue-50 rounded-[5px] relative">
+              <input type="text" name="text" ref={inputRef} onChange={() => debounceData() } placeholder="Search" required defaultValue={searchParams.get("query")?.toString()} className="bg-blue-50 text-black w-full pe-10 p-2 h-full border-0 " autoComplete="off" />
+              <img src="/search-outline.svg" onClick={handleSearch} className='w-7 absolute top-1/2 right-1 transform -translate-y-1/2' alt="" />
+            </div>}
     </div>
   
   )
