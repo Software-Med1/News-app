@@ -37,8 +37,8 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Med Blog || Home",
-  description: "A blog for getting latest updates on tech and fashion",
+  title: "Home || Med News",
+  description: "A news platform for getting latest updates on Tech, Sports and Entertainment",
 };
 
 export default async function RootLayout ({ children }) {

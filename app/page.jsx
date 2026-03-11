@@ -3,6 +3,12 @@ import Blogs from "./components/blogs";
 import Stories from "./components/stories";
 import getBlogs from "./components/blogslist";
 
+
+export const metadata = {
+  title: "Home || Med News",
+  description: "A News platform for getting latest updates on Tech, Sports and Entertainment",
+};
+
 export default async function Home() {
   const articles  = await getBlogs();
 

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import getBlogs from '../../components/blogslist'
 
 
+
 export default  async function Blog ( {params} ) {
     const  articles  = await getBlogs()
     const { id } = await params

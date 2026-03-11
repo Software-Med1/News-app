@@ -4,6 +4,12 @@ import Stories from '../components/stories'
 import getBlogs from '../components/blogslist'
 import Category from '../components/category'
 
+
+export const metadata = {
+  title: "All News || Med News",
+  description: "Stay updated with the latest news breaking news in Tech, Sports and Entertainment",
+};
+
 const blogs = async ({searchParams}) => {
 
 
